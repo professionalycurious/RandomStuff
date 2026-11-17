@@ -1,0 +1,255 @@
+<!-- ===================== PART III ===================== -->
+<section class="chapter" id="ch07" data-part="Part III — The Scores" data-title="How Scores Are Calculated">
+  <div class="ch-head"><span class="mk">@@ch07@@</span><div class="partline">Part III · The Scores</div><div class="num">07</div>
+    <h1>How Scores Are Calculated</h1>
+    <p class="dek">The formulas are proprietary, but the ingredients are well known. Five factors explain almost everything.</p>
+  </div>
+
+  <p>No bureau publishes its full formula, and the models are re-estimated regularly. What the developers <em>do</em> publish is how much each category of information matters for the general population. Learn these weights and you will know where your effort pays off.</p>
+
+  <div class="two">
+    <figure>
+      <div class="fig-title">FICO® Score: published factor weights</div>
+      <div class="hbar">
+        <div class="row"><div class="lbl">Payment history</div><div class="track"><div class="fill" style="width:77.8%"></div></div><div class="val">35%</div></div>
+        <div class="row"><div class="lbl">Amounts owed</div><div class="track"><div class="fill" style="width:66.7%"></div></div><div class="val">30%</div></div>
+        <div class="row"><div class="lbl">Length of history</div><div class="track"><div class="fill" style="width:33.3%"></div></div><div class="val">15%</div></div>
+        <div class="row"><div class="lbl">New credit</div><div class="track"><div class="fill" style="width:22.2%"></div></div><div class="val">10%</div></div>
+        <div class="row"><div class="lbl">Credit mix</div><div class="track"><div class="fill" style="width:22.2%"></div></div><div class="val">10%</div></div>
+      </div>
+      <figcaption><b>Figure 7.1.</b> Source: myFICO, general population. Weights differ for individuals, especially thin files.</figcaption>
+    </figure>
+    <figure>
+      <div class="fig-title">VantageScore® 4.0: published factor weights</div>
+      <div class="hbar">
+        <div class="row"><div class="lbl">Payment history</div><div class="track"><div class="fill" style="width:91.1%"></div></div><div class="val">41%</div></div>
+        <div class="row"><div class="lbl">Depth of credit</div><div class="track"><div class="fill" style="width:44.4%"></div></div><div class="val">20%</div></div>
+        <div class="row"><div class="lbl">Credit utilisation</div><div class="track"><div class="fill" style="width:44.4%"></div></div><div class="val">20%</div></div>
+        <div class="row"><div class="lbl">Recent credit</div><div class="track"><div class="fill" style="width:24.4%"></div></div><div class="val">11%</div></div>
+        <div class="row"><div class="lbl">Balances</div><div class="track"><div class="fill" style="width:13.3%"></div></div><div class="val">6%</div></div>
+        <div class="row"><div class="lbl">Available credit</div><div class="track"><div class="fill" style="width:4.4%"></div></div><div class="val">2%</div></div>
+      </div>
+      <figcaption><b>Figure 7.2.</b> Source: VantageScore Solutions. Both charts use the same 0–45% axis.</figcaption>
+    </figure>
+  </div>
+
+  <figure>
+    <div class="fig-title">Indian CIC scores: commonly cited approximate weights</div>
+    <div class="hbar" style="max-width:120mm">
+      <div class="row"><div class="lbl">Payment history</div><div class="track"><div class="fill" style="width:66.7%"></div></div><div class="val">~30%</div></div>
+      <div class="row"><div class="lbl">Credit utilisation</div><div class="track"><div class="fill" style="width:55.6%"></div></div><div class="val">~25%</div></div>
+      <div class="row"><div class="lbl">Credit mix &amp; duration</div><div class="track"><div class="fill" style="width:55.6%"></div></div><div class="val">~25%</div></div>
+      <div class="row"><div class="lbl">Enquiries &amp; new credit</div><div class="track"><div class="fill" style="width:44.4%"></div></div><div class="val">~20%</div></div>
+    </div>
+    <figcaption><b>Figure 7.3.</b> Indian CICs do not publish exact weights. These figures are an industry approximation, widely used to explain the CIBIL score. Treat them as directional.</figcaption>
+  </figure>
+
+  <h2>The five factors, as an underwriter sees them</h2>
+  <h3>1. Payment history: "Do you pay as agreed?"</h3>
+  <p>This is the most important factor in every model. It covers whether you paid late, how late (30, 60 or 90+ days), how recently, and how often, plus any severe events: settlements, write-offs, collections, bankruptcy. One recent 30-day delinquency hurts more than several old ones. A 90-day default dominates a profile for years.</p>
+
+  <h3>2. Amounts owed and utilisation: "How stretched are you?"</h3>
+  <p>For revolving credit (cards, credit lines), the key measure is <strong>utilisation</strong>: reported balances divided by credit limits, both overall and per card. For instalment loans, models compare the remaining balance with the original amount; paying a loan down is a mildly positive signal. Utilisation has <em>no memory</em> in older models: bring it down and the score recovers by the next reporting cycle. That is why it is the quickest factor to fix (Chapter 12).</p>
+
+  <h3>3. Length of history: "How long have we known you?"</h3>
+  <p>This includes the age of your oldest account, the average age of all accounts, and how long since each was last used. You cannot speed it up. You can only avoid shortening it, which is why closing your oldest card is usually a mistake.</p>
+
+  <h3>4. New credit and enquiries: "Are you suddenly hungry for credit?"</h3>
+  <p>Several new accounts or hard enquiries in a short period are statistically linked to higher risk, because people in financial trouble often apply everywhere at once. The effect is modest and fades within months, but it can push a borderline application below a cut-off.</p>
+
+  <h3>5. Credit mix: "Can you handle different kinds of debt?"</h3>
+  <p>Having both revolving (cards) and instalment (loans) credit, and both secured and unsecured debt, is a slight positive. <strong>Never take a loan just to improve your mix.</strong> The interest will cost far more than the few points it might add.</p>
+
+  <h2>The newer generation: trends and alternative data</h2>
+  <ul>
+    <li><strong>Trended data.</strong> <span class="tag us">USA</span> FICO 10T and VantageScore 4.0 look at about 24 months of balance history. A <em>transactor</em> who pays in full every month scores better than a <em>revolver</em> whose balance keeps rising, even when today's balances are the same.</li>
+    <li><strong>Alternative data.</strong> <span class="tag us">USA</span> Experian Boost (utility, phone, streaming and rent payments) and UltraFICO (bank-account cash-flow data) can help thin files. <span class="tag in">India</span> The <strong>Account Aggregator</strong> framework lets lenders read your bank statements digitally with your consent. This makes cash-flow-based lending possible for borrowers with little bureau history.</li>
+    <li><strong>Buy Now, Pay Later.</strong> <span class="tag us">USA</span> FICO has released BNPL-aware versions of Score 10 and 10T, and some large BNPL providers now report to bureaus, but lenders are adopting them slowly. <span class="tag in">India</span> Pay-later products from regulated lenders are already reported like any other loan.</li>
+  </ul>
+
+  <h2>What the score never considers</h2>
+  <table class="compact">
+    <thead><tr><th style="width:50%">Not in the score</th><th>But may matter elsewhere</th></tr></thead>
+    <tbody>
+      <tr><td>Income, salary, bonus, employer</td><td>Lenders check affordability separately (FOIR / DTI)</td></tr>
+      <tr><td>Savings, FDs, investments, property</td><td>Collateral and relationship value in underwriting</td></tr>
+      <tr><td>Age, gender, religion, caste, race, marital status</td><td>Prohibited from credit decisions under fair-lending laws</td></tr>
+      <tr><td>Where you live (locality)</td><td>Some lender policies, within legal limits</td></tr>
+      <tr><td>Interest rates you pay</td><td>Your total EMI burden in affordability checks</td></tr>
+      <tr><td>Soft enquiries, including checking your own score</td><td>Nothing; they are invisible to lenders</td></tr>
+      <tr><td>Debit-card spending and UPI payments</td><td>Cash-flow analysis via bank statements or Account Aggregator</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note"><div class="co-h">Analyst's Note</div>
+    <p>If you remember one thing from this chapter: <strong>about two-thirds of your score comes from two behaviours, paying on time and keeping balances low.</strong> Everything else is fine-tuning. I have seen people chase "credit mix" and "account age" tricks while carrying 80% utilisation. Fix the big two first.</p>
+  </div>
+</section>
+
+<section class="chapter" id="ch08" data-part="Part III — The Scores" data-title="Score Ranges, Bands and What Lenders Do With Them">
+  <div class="ch-head"><span class="mk">@@ch08@@</span><div class="partline">Part III · The Scores</div><div class="num">08</div>
+    <h1>Score Ranges, Bands and What Lenders Do With Them</h1>
+    <p class="dek">The number matters less than which side of a lender's cut-off it falls on.</p>
+  </div>
+
+  <p>Every scoring system has a range and a set of bands. The bands published by score developers are only a guide. What actually decides your outcome are the <strong>internal cut-offs and pricing grids</strong> each lender sets. The scales below show the published or commonly used bands. The tables that follow show what they mean in practice.</p>
+
+  <figure>
+    <div class="scale-name">India: CIC scores (CIBIL, Experian, Equifax, CRIF) <span>practitioner bands; lender policies vary</span></div>
+    <div class="scale">
+      <div class="bar"><div class="seg l1" style="width:58.33%">High risk · below 650</div><div class="seg l2" style="width:8.33%">Fair</div><div class="seg l3" style="width:8.33%">Good</div><div class="seg l4" style="width:8.33%">V. good</div><div class="seg l5" style="width:16.67%">Excellent</div></div>
+      <div class="ticks"><span style="left:0">300</span><span style="left:58.33%">650</span><span style="left:66.67%">700</span><span style="left:75%">750</span><span style="left:83.33%">800</span><span style="left:100%">900</span></div>
+    </div>
+    <div class="scale-name">USA: FICO® Score 8 and most base versions <span>FICO's published bands</span></div>
+    <div class="scale">
+      <div class="bar"><div class="seg l1" style="width:50.91%">Poor · below 580</div><div class="seg l2" style="width:16.36%">Fair</div><div class="seg l3" style="width:12.73%">Good</div><div class="seg l4" style="width:10.91%">V. good</div><div class="seg l5" style="width:9.09%">Except.</div></div>
+      <div class="ticks"><span style="left:0">300</span><span style="left:50.91%">580</span><span style="left:67.27%">670</span><span style="left:80%">740</span><span style="left:90.91%">800</span><span style="left:100%">850</span></div>
+    </div>
+    <div class="scale-name">USA: VantageScore® 3.0 / 4.0 <span>VantageScore's published bands</span></div>
+    <div class="scale">
+      <div class="bar"><div class="seg l1" style="width:36.3%">Very poor</div><div class="seg l2" style="width:18.3%">Poor</div><div class="seg l3" style="width:10.9%">Fair</div><div class="seg l4" style="width:21.8%">Good</div><div class="seg l5" style="width:12.7%">Excellent</div></div>
+      <div class="ticks"><span style="left:0">300</span><span style="left:36.36%">500</span><span style="left:54.73%">601</span><span style="left:65.64%">661</span><span style="left:87.45%">781</span><span style="left:100%">850</span></div>
+    </div>
+    <figcaption><b>Figure 8.1.</b> Segment widths are drawn to scale. Most borrowers in a mature market fall in the upper half of the range, which is why the "good" bands look narrow.</figcaption>
+  </figure>
+
+  <h2>What each band usually means: India</h2>
+  <table>
+    <thead><tr><th style="width:16%">Score</th><th style="width:34%">Typical lender response</th><th>Practical implications</th></tr></thead>
+    <tbody>
+      <tr><td><b>800–900</b></td><td>Top tier. Fastest approvals, best published rates, pre-approved offers.</td><td>Strong position to negotiate processing fees and the spread on home loans.</td></tr>
+      <tr><td><b>750–799</b></td><td>Prime. Approved by nearly all lenders, at or near the best rates.</td><td>The practical target for most borrowers. Above 750, extra points add relatively little.</td></tr>
+      <tr><td><b>700–749</b></td><td>Generally approved, though the pricing tier may be one step higher.</td><td>Unsecured limits may be smaller. Worth improving before a home loan.</td></tr>
+      <tr><td><b>650–699</b></td><td>Selective. More scrutiny, higher rates, possibly a co-applicant or collateral.</td><td>Many premium cards and fintech loans become hard to get.</td></tr>
+      <tr><td><b>Below 650</b></td><td>Frequently declined for unsecured credit. Secured products remain possible.</td><td>Focus on repair (Ch. 13) and secured credit-building (Ch. 11).</td></tr>
+      <tr><td><b>NA / NH / –1</b></td><td>No score: not enough history. This is <em>not</em> the same as a bad score.</td><td>Lenders treat you as new-to-credit and rely on income documents and other data.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What each band usually means: USA (FICO)</h2>
+  <table>
+    <thead><tr><th style="width:16%">FICO</th><th style="width:34%">Typical lender response</th><th>Practical implications</th></tr></thead>
+    <tbody>
+      <tr><td><b>800–850</b></td><td>Exceptional. Best tiers on everything.</td><td>Above roughly 780–800, extra points rarely change your price.</td></tr>
+      <tr><td><b>740–799</b></td><td>Very good. Near-best pricing on most products.</td><td>A sensible floor to aim for before a mortgage.</td></tr>
+      <tr><td><b>670–739</b></td><td>Good. Approved widely, but with mid-tier pricing.</td><td>The US average FICO was around 715 in 2025.</td></tr>
+      <tr><td><b>580–669</b></td><td>Fair. Subprime for many lenders: higher APRs, fees, deposits.</td><td>FHA mortgages remain possible, typically from 580 with 3.5% down.</td></tr>
+      <tr><td><b>Below 580</b></td><td>Poor. Mostly secured or specialist products.</td><td>Rebuild with secured cards and credit-builder loans.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The cliff effect: why 749 and 750 are different numbers</h2>
+  <p>Lenders turn a continuous score into a small number of <strong>buckets</strong>, and they price by bucket. US conventional mortgage pricing adjustments step in roughly 20-point buckets (for example 760–779 and 780+). Many Indian banks publish home-loan rate cards with tiers such as 800+, 750–799 and 700–749. If your score is just below a breakpoint, a few points of improvement before you apply can move you into a cheaper tier for the <em>entire</em> loan term. Chapter 19 puts a price on it.</p>
+
+  <div class="tip"><div class="co-h">Do This Now</div>
+    <p>Before any large loan, ask the lender for its <strong>score tiers</strong>. If you are within about 20 points of the next tier, a 60–90 day sprint (pay card balances to under 10% before the statement dates, no new applications, fix report errors) often closes the gap.</p>
+  </div>
+</section>
+
+<section class="chapter" id="ch09" data-part="Part III — The Scores" data-title="Why Your Scores Differ — and Which One Matters">
+  <div class="ch-head"><span class="mk">@@ch09@@</span><div class="partline">Part III · The Scores</div><div class="num">09</div>
+    <h1>Why Your Scores Differ, and Which One Matters</h1>
+    <p class="dek">Same person, same day, four different numbers. Usually that is normal. Sometimes it means something is wrong.</p>
+  </div>
+
+  <h2>Five reasons for the gap</h2>
+  <table class="matrix">
+    <thead><tr><th>Reason</th><th>What is happening</th><th style="width:28%">What to do</th></tr></thead>
+    <tbody>
+      <tr><td>Different data at each bureau</td><td><span class="tag us">USA</span> Some lenders report to one or two bureaus only. <span class="tag in">India</span> All lenders report to all four, but matching errors (name spellings, old addresses, missing PAN) can attach an account to the wrong file or miss it.</td><td>Compare account lists across all reports.</td></tr>
+      <tr><td>Different timing</td><td>A balance reported to one bureau on the 9th and to another on the 23rd will show different utilisation.</td><td>Wait one cycle and compare again.</td></tr>
+      <tr><td>Different models</td><td>CIBIL, Experian, Equifax and CRIF each build their own score. In the US, FICO and VantageScore weigh things differently.</td><td>Track trends within one score, not across scores.</td></tr>
+      <tr><td>Different versions</td><td>FICO 8, FICO 9, Classic FICO 2/4/5, FICO 10T, VantageScore 3.0 and 4.0, and industry versions (Auto, Bankcard) can all differ.</td><td>Ask lenders which version they use.</td></tr>
+      <tr><td>Errors</td><td>An account that is not yours, a wrong late payment, a closed loan still showing open, a duplicate entry.</td><td>Dispute it (Chapter 14).</td></tr>
+    </tbody>
+  </table>
+
+  <div class="stats">
+    <div class="stat"><div class="k">Normal gap</div><div class="v">20–40 pts</div><div class="d">Between bureaus or models for a stable, clean file</div></div>
+    <div class="stat"><div class="k">Investigate</div><div class="v">60+ pts</div><div class="d">Usually means the underlying data differs. Compare the reports.</div></div>
+    <div class="stat"><div class="k">Best metric</div><div class="v">Trend</div><div class="d">The direction of one score over 6–12 months says more than any single reading</div></div>
+  </div>
+
+  <h2>Which score will my lender actually see?</h2>
+  <table>
+    <thead><tr><th style="width:24%">Situation</th><th style="width:38%"><span class="tag in">India</span> commonly used</th><th><span class="tag us">USA</span> commonly used</th></tr></thead>
+    <tbody>
+      <tr><td><b>Home loan / mortgage</b></td><td>CIBIL in almost every case, often with a second CIC; all four reviewed by some lenders</td><td>Classic FICO 2/4/5 from all three bureaus (middle score), or VantageScore 4.0 where the lender has adopted it</td></tr>
+      <tr><td><b>Credit card</b></td><td>CIBIL and/or Experian, varying by issuer</td><td>FICO 8, FICO Bankcard Score or VantageScore, from one or more bureaus</td></tr>
+      <tr><td><b>Car loan</b></td><td>CIBIL plus another CIC</td><td>FICO Auto Score (250–900), often from one or two bureaus</td></tr>
+      <tr><td><b>Personal loan (app / NBFC)</b></td><td>Multi-bureau, commonly Experian, CRIF and CIBIL</td><td>FICO 8/9 or VantageScore, plus bank-account data</td></tr>
+      <tr><td><b>Microfinance / rural</b></td><td>CRIF High Mark and Equifax</td><td>n/a</td></tr>
+      <tr><td><b>Business / MSME loan</b></td><td>Commercial reports (e.g. CIBIL CMR) plus promoters' personal scores</td><td>Business bureaus (e.g. D&amp;B, Experian Business) plus the owner's personal FICO</td></tr>
+    </tbody>
+  </table>
+  <p class="tcap">These reflect common practice, not rules. Lenders change bureaus and models over time. When in doubt, ask.</p>
+
+  <h2>When your scores disagree: a five-step diagnostic</h2>
+  <ol>
+    <li><strong>Label each score:</strong> the date, the bureau, and the model and version. Many apparent "drops" turn out to be comparisons between different products.</li>
+    <li><strong>Download the full reports</strong> behind both scores, from the same week if possible.</li>
+    <li><strong>Compare the account lists.</strong> An account that appears at one bureau but not another is the most common cause of a large gap.</li>
+    <li><strong>Compare balances and reporting dates.</strong> Differences in when utilisation was captured explain most moderate gaps.</li>
+    <li><strong>Compare negatives and enquiries.</strong> Anything negative that appears at only one bureau may be an error. Investigate it and dispute it if it is wrong.</li>
+  </ol>
+
+  <div class="note"><div class="co-h">Analyst's Note</div>
+    <p>Don't try to manage a <em>score</em>. Manage the <em>data</em>. Every scoring model reads the same raw facts: your payments, balances, ages and enquiries. Keep those clean and accurate and every score, from every bureau and every version, moves the same way. That is how I run my own credit, and it is the least stressful approach I know.</p>
+  </div>
+</section>
+
+<section class="chapter" id="ch10" data-part="Part III — The Scores" data-title="Enquiries: Hard, Soft and Rate Shopping">
+  <div class="ch-head"><span class="mk">@@ch10@@</span><div class="partline">Part III · The Scores</div><div class="num">10</div>
+    <h1>Enquiries: Hard, Soft and Rate Shopping</h1>
+    <p class="dek">Checking your own score is free and harmless. Applying everywhere at once is neither.</p>
+  </div>
+
+  <table>
+    <thead><tr><th style="width:18%"></th><th>Hard enquiry (US: "hard inquiry")</th><th>Soft enquiry</th></tr></thead>
+    <tbody>
+      <tr><td><b>Triggered by</b></td><td>Your application for a loan, card or credit line</td><td>Checking your own report; pre-approved offers; existing lenders' account reviews; some employer and insurer checks</td></tr>
+      <tr><td><b>Visible to lenders?</b></td><td>Yes, with date, lender and (in India) purpose and amount</td><td>No. Only you see them.</td></tr>
+      <tr><td><b>Score impact</b></td><td>Small and temporary. Several in a short period can add up.</td><td>None</td></tr>
+      <tr><td><b>How long it stays</b></td><td><span class="tag us">USA</span> 2 years on report; FICO scores it for 12 months. <span class="tag in">India</span> Listed in the enquiry section; lenders typically look at the last 30 days, 6 months and 12–24 months</td><td>Varies; never scored</td></tr>
+    </tbody>
+  </table>
+
+  <h2>India: enquiries carry extra weight in human underwriting</h2>
+  <p><span class="tag in">India</span> Indian reports show each enquiry's <strong>purpose and amount</strong>. An underwriter who sees three personal-loan enquiries for ₹5 lakh within ten days, and no new loan, draws an obvious conclusion: you were turned down twice. Watch out for these traps:</p>
+  <ul>
+    <li><strong>"Check your eligibility" buttons</strong> on loan marketplaces that send your application to several lenders. Some create a hard enquiry with each one. Read the consent screen.</li>
+    <li><strong>Agents filing on your behalf</strong> with five banks "to see who approves". Each one is an enquiry.</li>
+    <li><strong>Re-applying straight after a rejection.</strong> Find the reason first.</li>
+  </ul>
+  <p>Pre-approved and pre-qualified offers usually rely on soft data, and the lender makes a hard pull only when you accept and formally apply.</p>
+
+  <h2>USA: the rate-shopping window</h2>
+  <p><span class="tag us">USA</span> Scoring models recognise that shopping for the best mortgage, car loan or student loan is sensible behaviour:</p>
+  <ul>
+    <li><strong>FICO</strong> treats multiple mortgage, auto or student-loan enquiries within <strong>45 days</strong> as one (older versions, still used in mortgages, use <strong>14 days</strong>). It also ignores such enquiries made in the 30 days before scoring.</li>
+    <li><strong>VantageScore</strong> groups enquiries made within a <strong>14-day</strong> window.</li>
+    <li><strong>Credit cards are not grouped.</strong> Every card application counts separately.</li>
+  </ul>
+  <p>According to FICO, a single hard enquiry costs most people <strong>fewer than five points</strong>. The bigger risk is a <em>cluster</em> of new accounts, which also lowers your average account age.</p>
+
+  <h2>Offer types decoded</h2>
+  <table class="compact">
+    <thead><tr><th style="width:30%">What you see</th><th style="width:28%">Type of check</th><th>What to know</th></tr></thead>
+    <tbody>
+      <tr><td><b>"Pre-approved" from your own bank</b></td><td>Soft: based on the relationship and existing data</td><td>No effect on your score until you accept. A final hard check may follow.</td></tr>
+      <tr><td><b>"Pre-qualified" / "check your rate"</b></td><td>Usually soft</td><td>Confirm on the consent screen. Rates are indicative, not guaranteed.</td></tr>
+      <tr><td><b>Marketplace "eligibility check"</b></td><td>Varies</td><td>Some marketplaces submit real applications to several lenders, creating several hard enquiries.</td></tr>
+      <tr><td><b>Formal application</b></td><td>Hard</td><td>Recorded with date, lender and (India) purpose and amount.</td></tr>
+      <tr><td><b>Limit increase on an existing card</b></td><td>Often soft, sometimes hard</td><td>Ask before you request it. Increases the bank offers you are usually soft.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="take"><div class="co-h">The Analyst's Application Rules</div>
+    <ul>
+      <li>Space card and loan applications at least <strong>3–6 months</strong> apart unless you are rate-shopping a single loan.</li>
+      <li>Do all rate shopping for one loan within <strong>14 days</strong> to be safe under every model.</li>
+      <li>Avoid any new credit applications for <strong>6 months before a home loan</strong>.</li>
+      <li>After a rejection, get the reason (US lenders must send an adverse-action notice; in India, ask the lender) and fix it before applying again.</li>
+    </ul>
+  </div>
+</section>
